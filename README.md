@@ -41,4 +41,23 @@ int main(){
 
 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
+**call by value**
+#include<iostream>
+using namespace std;
+
+void swap( int x, int y){
+    int t=x;
+    x=y;
+    y=t;
+    cout<<"Inside function :x : "<< x<<" y: "<< y<< endl;
+    cout<<"Inside function :x : "<< x<<" y: "<< y<< endl;
+}
+int main(){
+    int a=3,b=5;
+    cout<<"before Swap: a is: "<<a<<" b: "<<b<<endl;
+    swap(a,b);
+    cout<<"After Swap:a is : "<< a<<"b: "<<b<<endl;
+    cout<<"After Swap:a is : "<< &a<<"b: "<<a<<endl;
+    return 0;
+}
 
