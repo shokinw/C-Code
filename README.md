@@ -80,3 +80,26 @@ int main(){
     
     return 0;
 } 
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+**object to pointer**
+#include <iostream>
+using namespace std;
+class ABC{
+    public:
+    int x=5;
+    void display(){
+        cout<<" x is : "<<x<<endl;
+    }
+};
+int main(){
+    ABC obj;
+    ABC *p;
+    p=&obj;
+    p->display();
+    (*p).display();
+}
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
