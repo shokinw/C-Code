@@ -102,4 +102,20 @@ int main(){
 }
 
 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+**dangling pointer**
+#include<iostream>
+using namespace std;
+
+void createDanglingPointer(){
+    int *ptr = new int(10);  // Dynamically allocate memory for an integer and assign it the value 10
+    cout << "Value: " << *ptr << endl;  // Output the value of the dynamically allocated memory (10)
+    delete ptr;  // Free the allocated memory, making the pointer dangling
+}
+
+int main(){
+    createDanglingPointer();  // Correct function call with parentheses
+    return 0;
+}
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
