@@ -119,3 +119,29 @@ int main(){
 
 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    fstream file("output.txt",ios::in  | ios::out | ios::app);
+    string line;
+    if(file.is_open()){
+        cout<<"File opened successfully"<<endl;
+        file<<"Hello K23XT"<<endl;
+        cout<<file.tellg()<<endl;
+        file.seekg(7,ios::beg);
+        cout<<file.tellg()<<endl;
+        while(getline(file,line)){
+            cout<<line<<endl;
+        }
+        if(file.eof()){
+            cout<<"End";
+        }
+    }
+    else{
+        cout<<"File not opened"<<endl;
+    }
+    file.close();
+}
+
